@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Reciclaje</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!-- Sección 1 -->
+    <section id="section-reciclaje" class="section-reciclaje">
+        <h1 class="titulo-principal">
+            <span class="word">Cada</span> 
+            <span class="word">residuo</span> 
+            <span class="word">cuenta.</span> 
+            <span class="word">Cada</span> 
+            <span class="word">acción</span> 
+            <span class="word">importa.</span>
+        </h1>
+        <img src="imag/basurero.svg" alt="Contenedor de reciclaje" class="imagen-reciclaje">
+        <p class="descripcion">Con inteligencia artificial, cada objeto encuentra su lugar para construir un futuro más sostenible.</p>
+        
+        <!-- Botón de enlace a la segunda sección -->
+        <a href="#section-info" class="boton-conoce" onclick="activarAnimaciones()">Conoce cómo funciona</a>
+    </section>
+    
+
+    <!-- Sección 2 -->
+    <section id="section-info" class="section-info">
+        <!-- Título con animación fadeInDown -->
+        <h2 class="info-titulo animate__animated">ECOIA utiliza visión por computadora para identificar residuos, analizarlos y sugerir el contenedor adecuado, logrando una precisión del 95%.</h2>
+        
+        <!-- "Así Funciona" y logo con animación fadeInLeft -->
+        <div class="funcion-logo animate__animated">
+            <span class="funcion-texto">Así Funciona</span>
+            <img src="imag/logoecoia.svg" alt="Logo ECOIA" class="logo-ecoia">
+        </div>
+
+        <!-- Pasos con animación pulse en secuencia -->
+        <div class="pasos-container">
+            <div class="paso animate__animated">
+                <h3 class="paso-titulo">Paso 1: Escaneo Visual</h3>
+                <p class="paso-descripcion">ECOIA escanea el residuo mediante IA.</p>
+                <img src="imag/paso1.svg" alt="Paso 1" class="paso-imagen">
+            </div>
+            <div class="paso animate__animated">
+                <h3 class="paso-titulo">Paso 2: Clasificación del Material</h3>
+                <p class="paso-descripcion">Determina si el residuo es plástico, papel, vidrio u otro.</p>
+                <img src="imag/paso2.svg" alt="Paso 2" class="paso-imagen">
+            </div>
+            <div class="paso animate__animated">
+                <h3 class="paso-titulo">Paso 3: Sugerencia de Recipiente</h3>
+                <p class="paso-descripcion">ECOIA sugiere al usuario el contenedor correcto según el tipo de material.</p>
+                <img src="imag/paso3.svg" alt="Paso 3" class="paso-imagen">
+            </div>
+        </div>
+    </section>
+
+    
+
+ 
+
+  <!-- Sección 3 -->
+  <section id="section-aplicaciones" class="section-aplicaciones">
+    <h2 class="aplicaciones-titulo">ECOIA: Inteligencia Aplicada para Clasificación en Cualquier Espacio</h2>
+    
+    <div class="aplicaciones-container">
+        <!-- Oficina -->
+        <div class="aplicacion-cuadro">
+            <h3 class="aplicacion-titulo">Oficina</h3>
+            <img src="imag/oficina.svg" alt="Oficina" class="aplicacion-imagen">
+            <p class="aplicacion-descripcion">Optimiza la gestión de residuos en espacios de trabajo.</p>
+        </div>
+        
+        <!-- Industria -->
+        <div class="aplicacion-cuadro">
+            <h3 class="aplicacion-titulo">Industria</h3>
+            <img src="imag/industria.svg" alt="Industria" class="aplicacion-imagen">
+            <p class="aplicacion-descripcion">Clasifica residuos para facilitar su reciclaje en plantas industriales.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 4 -->
+<section id="section-beneficios" class="section-beneficios">
+    <h2 class="beneficios-titulo">Beneficios de ECOIA</h2>
+    
+    <div class="beneficios-container">
+        <!-- Precisión -->
+        <div class="beneficio-circulo">
+            <h3 class="beneficio-titulo">Precisión del 95%</h3>
+            <p class="beneficio-descripcion">Clasificación confiable y eficiente.</p>
+            <img src="imag/checke.svg" alt="Check" class="beneficio-imagen">
+        </div>
+        
+        <!-- Fácil implementación -->
+        <div class="beneficio-circulo">
+            <h3 class="beneficio-titulo">Fácil implementación</h3>
+            <p class="beneficio-descripcion">Funciona en dispositivos domésticos y comerciales.</p>
+            <img src="imag/pc.svg" alt="PC" class="beneficio-imagen">
+        </div>
+        
+        <!-- Escalable -->
+        <div class="beneficio-circulo">
+            <h3 class="beneficio-titulo">Escalable</h3>
+            <p class="beneficio-descripcion">Adaptable para hogares, oficinas e industrias.</p>
+            <img src="imag/flecha.svg" alt="Flecha" class="beneficio-imagen">
+        </div>
+        
+        <!-- Sostenibilidad -->
+        <div class="beneficio-circulo">
+            <h3 class="beneficio-titulo">Sostenibilidad</h3>
+            <p class="beneficio-descripcion">Facilita una mejor gestión de los residuos.</p>
+            <img src="imag/hoja.svg" alt="Hoja" class="beneficio-imagen">
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección 5 -->
+<section class="section-invitacion">
+    <div class="invitacion-contenido">
+        <!-- Texto de invitación -->
+        <p class="invitacion-texto">¿Listo para mejorar la forma en que clasificas los residuos?</p>
+
+        <!-- Imagen de invitación -->
+        <img src="imag/invitacion.svg" alt="Invitación a clasificar residuos" class="invitacion-imagen">
+    </div>
+
+    <!-- Botón de contacto -->
+    <a href="#contacto" class="boton-contacto">Contáctanos para más información</a>
+</section>
+
+<!-- Sección de Contacto -->
+<section class="section-contacto">
+    <h2 class="contacto-titulo">Contacto</h2>
+    <div class="contacto-contenedor">
+        <!-- Formulario de contacto -->
+        <form class="contacto-formulario">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje o consulta:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit" class="boton-enviar">Enviar mensaje</button>
+        </form>
+
+        <!-- Imagen de contacto -->
+        <div class="contacto-imagen">
+            <img src="imag/correo.svg" alt="Imagen de contacto">
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- Footer -->
+ <footer class="footer">
+    <nav class="footer-nav">
+        <a href="#section-reciclaje" class="footer-link">Inicio</a> <!-- Apunta a la sección 1 -->
+        <a href="#section-info" class="footer-link">Cómo Funciona</a>
+        <a href="#aplicaciones" class="footer-link">Aplicaciones</a>
+        <a href="#beneficios" class="footer-link">Beneficios</a>
+        <a href="#contacto" class="footer-link">Contacto</a>
+    </nav>
+</footer>
+
+    <!-- Script para activar animaciones al hacer clic en el botón -->
+    <script>
+        function activarAnimaciones() {
+            // Título
+            document.querySelector('.info-titulo').classList.add('animate__fadeInDown');
+            
+            // "Así Funciona" y Logo
+            document.querySelector('.funcion-logo').classList.add('animate__fadeInLeft');
+            
+            // Pasos con animación en secuencia
+            const pasos = document.querySelectorAll('.pasos-container .paso');
+            pasos[0].classList.add('animate__pulse');
+            pasos[0].style.animationDelay = "1s"; // Primer paso aparece después de 1s
+
+            pasos[1].classList.add('animate__pulse');
+            pasos[1].style.animationDelay = "1.5s"; // Segundo paso aparece después de 1.5s
+
+            pasos[2].classList.add('animate__pulse');
+            pasos[2].style.animationDelay = "2s"; // Tercer paso aparece después de 2s
+        }
+    </script>
+</body>
+</html>

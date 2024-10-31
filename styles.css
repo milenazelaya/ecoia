@@ -1,0 +1,655 @@
+/* Footer */
+.footer {
+    background-color: #143601; /* Fondo verde oscuro para el footer */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se reorganicen en dispositivos pequeños */
+}
+
+.footer-link {
+    color: #AAD576; /* Color de texto */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #FFFFFF; /* Color de texto al pasar el cursor */
+}
+
+/* Responsividad para el footer en dispositivos móviles */
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column; /* Coloca los enlaces en una columna */
+        gap: 20px; /* Espacio vertical entre enlaces en móviles */
+    }
+
+    .footer-link {
+        font-size: 16px; /* Tamaño de fuente ligeramente reducido en móviles */
+    }
+}
+
+
+/* Reset de márgenes, paddings y fondo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent; /* Asegura que todos los elementos tengan un fondo transparente */
+}
+
+/* Sección 1: Configuración del fondo y estilos generales de la sección */
+.section-reciclaje {
+    background-color: #143601; /* Fondo verde oscuro */
+    color: #AAD576;
+    text-align: center;
+    padding: 40px 15px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh; /* Ocupa toda la altura de la pantalla sin afectar la estructura interna */
+    overflow: hidden; /* Evita que el contenido se extienda más allá de la pantalla */
+}
+
+/* Estilo del título principal y animación de palabras */
+.titulo-principal {
+    color: #AAD576;
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo-principal .word {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInWord 0.5s ease-out forwards;
+    margin-right: 8px; /* Espacio entre palabras */
+}
+
+/* Asegurarse de que la última palabra no tenga espacio extra */
+.titulo-principal .word:last-child {
+    margin-right: 0;
+}
+
+/* Retrasos secuenciales para cada palabra */
+.titulo-principal .word:nth-child(1) { animation-delay: 0.1s; }
+.titulo-principal .word:nth-child(2) { animation-delay: 0.3s; }
+.titulo-principal .word:nth-child(3) { animation-delay: 0.5s; }
+.titulo-principal .word:nth-child(4) { animation-delay: 0.7s; }
+.titulo-principal .word:nth-child(5) { animation-delay: 0.9s; }
+.titulo-principal .word:nth-child(6) { animation-delay: 1.1s; }
+
+/* Estilo de la imagen con animación */
+.imagen-reciclaje {
+    width: 600px;
+    height: auto;
+    margin: 15px 0 40px 0; /* Más espacio debajo de la imagen */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInImage 1s ease-out forwards;
+    animation-delay: 1.5s; /* Aparece después del título */
+}
+
+/* Estilo de la descripción con animación */
+.descripcion {
+    color: #AAD576;
+    font-size: 28px;
+    margin-bottom: 40px; /* Más espacio debajo de la descripción */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInText 1s ease-out forwards;
+    animation-delay: 2s; /* Aparece después de la imagen */
+}
+
+/* Estilo del botón con animación */
+.boton-conoce {
+    background-color: #538D22;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInText 1s ease-out forwards;
+    animation-delay: 2.2s; /* Aparece después del texto de descripción */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.boton-conoce:hover {
+    background-color: #45791A;
+}
+
+/* Keyframes para la animación de palabras */
+@keyframes fadeInWord {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes para la animación de la imagen y otros elementos */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad para tablets (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 36px;
+    }
+    .imagen-reciclaje {
+        width: 450px;
+        margin: 15px 0 30px 0; /* Ajuste del margen en tablet */
+    }
+    .descripcion {
+        font-size: 24px;
+        margin-bottom: 30px; /* Ajuste del margen en tablet */
+    }
+    .boton-conoce {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsividad para móviles (pantallas de 480px o menos) */
+@media (max-width: 480px) {
+    .section-reciclaje {
+        height: auto; /* Ajusta la altura para que se adapte al contenido en pantallas pequeñas */
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .titulo-principal {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .imagen-reciclaje {
+        width: 250px; /* Reduce el tamaño de la imagen */
+        margin: 10px 0 20px 0;
+    }
+
+    .descripcion {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .boton-conoce {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Sección 2 */
+.section-info {
+    background-color: #73A942;
+    color: #000000;
+    padding: 40px 20px;
+    text-align: left; /* Alineación a la izquierda para toda la sección */
+    font-family: 'Poppins', sans-serif;
+}
+
+.info-titulo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.funcion-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alineación del logo y texto a la izquierda */
+    margin-bottom: 30px;
+}
+
+.funcion-texto {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.logo-ecoia {
+    width: 135px;
+    height: 65px;
+}
+
+/* Contenedor de los pasos */
+.pasos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada paso */
+.paso {
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    position: relative;
+    border-right: 2px solid #ffffff; /* Línea blanca a la derecha */
+}
+
+/* Eliminar la línea del último paso */
+.paso:last-child {
+    border-right: none;
+}
+
+.paso-titulo {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #538D22;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.paso-descripcion {
+    color: #143601;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.paso-imagen {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .pasos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .paso {
+        width: 80%;
+        margin-bottom: 20px;
+        border-right: none; /* Sin línea en modo columna */
+        border-bottom: 2px solid #ffffff; /* Línea inferior para separar pasos en vertical */
+    }
+    .paso:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-titulo {
+        font-size: 30px;
+    }
+    .funcion-texto {
+        font-size: 20px;
+    }
+    .paso-titulo {
+        font-size: 18px;
+    }
+    .paso-descripcion {
+        font-size: 16px;
+    }
+}
+
+
+/* Sección 3 */
+.section-aplicaciones {
+    background-color: #143601; /* Fondo verde oscuro */
+    color: #AAD576; /* Color del título */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aplicaciones-titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.aplicaciones-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que los cuadros se reorganicen en dispositivos pequeños */
+}
+
+.aplicacion-cuadro {
+    background-color: #538D22; /* Color de fondo para los cuadros */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Ancho del cuadro */
+    text-align: center;
+    transition: transform 0.3s ease; /* Suaviza la transición */
+}
+
+/* Efecto de "brinco" al pasar el mouse */
+.aplicacion-cuadro:hover {
+    transform: translateY(-10px); /* Mueve el cuadro hacia arriba 10px */
+}
+
+.aplicacion-titulo {
+    font-size: 28px; /* Tamaño aumentado para el título */
+    color: #000000; /* Texto en negro */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.aplicacion-imagen {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.aplicacion-descripcion {
+    font-size: 18px; /* Tamaño aumentado para la descripción */
+    color: #000000; /* Texto en negro */
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .aplicaciones-container {
+        flex-direction: column; /* Coloca los cuadros en una columna */
+        align-items: center;
+        gap: 20px; /* Reduce el espacio entre cuadros */
+    }
+
+    .aplicacion-cuadro {
+        width: 100%; /* Ocupa el ancho completo en móviles */
+        max-width: 350px; /* Ancho máximo para que no se extienda demasiado */
+    }
+}
+
+/* Sección 4 */
+.section-beneficios {
+    background-color: #73A942; /* Fondo de la sección */
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.beneficios-titulo {
+    font-size: 40px; /* Tamaño más grande para el título de la sección */
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000000; /* Color negro para el título */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.beneficios-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Más espacio entre los círculos */
+    flex-wrap: wrap; /* Permite que los círculos se reorganicen en dispositivos pequeños */
+}
+
+.beneficio-circulo {
+    background-color: #143601; /* Fondo de cada círculo */
+    border-radius: 50%;
+    padding: 20px 15px; /* Espacio interno en el círculo */
+    width: 280px; /* Ajuste del ancho del círculo */
+    height: 280px; /* Ajuste de la altura del círculo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Asegura que el padding se mantenga dentro del tamaño del círculo */
+    text-align: center;
+}
+
+.beneficio-titulo {
+    font-size: 24px; /* Tamaño ajustado para el título en el círculo */
+    color: #FFFFFF; /* Texto en blanco */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Centrado dentro del círculo */
+    white-space: normal; /* Permite que el texto se expanda y fluya */
+}
+
+.beneficio-descripcion {
+    font-size: 16px; /* Tamaño ajustado para la descripción */
+    color: #FFFFFF; /* Texto en blanco */
+    text-align: center; /* Texto centrado para mantener uniformidad */
+    line-height: 1.4; /* Espacio entre líneas */
+    max-width: 230px; /* Ajuste del ancho máximo de la descripción */
+}
+
+.beneficio-imagen {
+    width: 50px; /* Ajuste del tamaño de la imagen */
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 480px) {
+    .beneficios-container {
+        flex-direction: column; /* Organiza los círculos en una columna */
+        gap: 20px; /* Menor espacio entre los círculos en dispositivos móviles */
+    }
+    .beneficio-circulo {
+        width: 250px; /* Ajuste de tamaño para los círculos en móviles */
+        height: 250px;
+    }
+    .beneficio-titulo {
+        font-size: 20px; /* Ajuste de tamaño del título en móviles */
+    }
+    .beneficio-descripcion {
+        font-size: 14px; /* Ajuste de tamaño de la descripción en móviles */
+        max-width: 180px; /* Ajuste de ancho máximo de la descripción en móviles */
+    }
+}
+
+
+/* Sección 5 */
+.section-invitacion {
+    background-color: #143601; /* Fondo verde oscuro */
+    color: #AAD576; /* Color del texto principal */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invitacion-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    max-width: 1000px;
+    margin-bottom: 40px; /* Espacio debajo del contenido */
+}
+
+.invitacion-texto {
+    font-size: 48px;
+    color: #AAD576;
+    max-width: 400px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.invitacion-imagen {
+    width: 350px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+.boton-contacto {
+    background-color: #538D22;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.boton-contacto:hover {
+    background-color: #45791A;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .invitacion-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .invitacion-texto {
+        font-size: 28px; /* Reduce el tamaño del texto */
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .invitacion-imagen {
+        width: 250px; /* Reduce el tamaño de la imagen */
+        margin-top: 20px; /* Espacio adicional arriba de la imagen */
+    }
+
+    .boton-contacto {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Sección de Contacto */
+.section-contacto {
+    background-color: #73A942; /* Fondo verde claro */
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    text-align: left;
+}
+
+.contacto-titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contacto-contenedor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end; /* Alinea todo el contenido hacia la derecha */
+    gap: 40px; /* Espacio entre formulario e imagen */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contacto-formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    align-items: flex-start; /* Alinea el formulario a la izquierda internamente */
+    order: 1;
+}
+
+.contacto-formulario label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #143601;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.boton-enviar {
+    background-color: #143601;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #0f2b01;
+}
+
+.contacto-imagen {
+    display: flex;
+    justify-content: flex-end; /* Alinea la imagen a la derecha */
+    max-width: 300px;
+    width: 100%;
+    order: 2;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contacto-contenedor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto-formulario {
+        width: 100%;
+        align-items: center; /* Centra el formulario en pantallas pequeñas */
+    }
+
+    .contacto-imagen {
+        margin-top: 20px;
+    }
+
+    .contacto-imagen img {
+        width: 250px;
+    }
+}
