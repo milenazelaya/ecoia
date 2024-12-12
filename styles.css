@@ -653,3 +653,79 @@
         width: 250px;
     }
 }
+
+/* Sección de Mantenimiento */
+.section-mantenimiento {
+    background-color: #143601; /* Fondo verde oscuro */
+    color: #AAD576; /* Texto en verde claro */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mantenimiento-titulo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.mantenimiento-descripcion {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #FFFFFF; /* Texto blanco */
+}
+
+.mantenimiento-lista {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Adaptable para dispositivos pequeños */
+}
+
+.mantenimiento-item {
+    background-color: #538D22; /* Fondo de cada cuadro */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Tamaño uniforme */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.mantenimiento-item:hover {
+    transform: translateY(-10px); /* Efecto de hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mantenimiento-icono {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.mantenimiento-item-titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF; /* Texto blanco */
+    margin-bottom: 10px;
+}
+
+.mantenimiento-item-descripcion {
+    font-size: 16px;
+    color: #FFFFFF; /* Texto blanco */
+    line-height: 1.4;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .mantenimiento-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mantenimiento-item {
+        width: 100%;
+        max-width: 350px; /* Tamaño máximo */
+    }
+}
